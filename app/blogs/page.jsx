@@ -47,15 +47,12 @@ export default async function Blogs() {
   let error = null;
 
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000"}/api/blogs`,
-      {
-        cache: "no-store", // or 'force-cache' for static generation
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
+      cache: "no-store", // or 'force-cache' for static generation
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
     if (!res.ok) {
       throw new Error(`Failed to fetch blogs: ${res.status} ${res.statusText}`);

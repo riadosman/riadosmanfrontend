@@ -5,7 +5,7 @@ import BlogCard from "./BlogCard";
 
 async function Blogs() {
   let blogs = [];
-  await fetch("http://localhost:3000/api/blogs")
+  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`)
     .then((res) => res.json())
     .then((data) => {
       blogs = data || [];

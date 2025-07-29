@@ -22,7 +22,7 @@ export default function BlogsDashboard() {
 
   const fetchBlogs = () => {
     setLoading(true);
-    fetch("http://localhost:3000/api/blogs")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`)
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error(err))
@@ -57,13 +57,16 @@ export default function BlogsDashboard() {
 
     try {
       if (editingBlogId) {
-        await fetch(`http://localhost:3000/api/blogs/${editingBlogId}`, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
+        await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${editingBlogId}`,
+          {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          }
+        );
       } else {
-        await fetch("http://localhost:3000/api/blogs", {
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
@@ -90,7 +93,7 @@ export default function BlogsDashboard() {
     if (!confirm("Are you sure you want to delete this blog?")) return;
 
     try {
-      await fetch(`http://localhost:3000/api/blogs/${id}`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${id}`, {
         method: "DELETE",
       });
       fetchBlogs();

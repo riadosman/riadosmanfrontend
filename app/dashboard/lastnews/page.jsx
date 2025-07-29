@@ -25,7 +25,9 @@ function LanguageDashboard() {
 
   const fetchLanguages = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/languages");
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/languages`
+      );
       if (!response.ok) throw new Error("Failed to fetch languages");
       const data = await response.json();
       setLanguages(data);
@@ -128,7 +130,7 @@ function LanguageDashboard() {
     try {
       if (editingLanguage) {
         const response = await fetch(
-          `http://localhost:3000/api/languages/${editingLanguage.id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/languages/${editingLanguage.id}`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
@@ -147,15 +149,18 @@ function LanguageDashboard() {
           )
         );
       } else {
-        const response = await fetch("http://localhost:3000/api/languages", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: formData.name,
-            proficiency: formData.proficiency.toLowerCase(),
-            flag: commonFlags[formData.name] || formData.flag,
-          }),
-        });
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/languages`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: formData.name,
+              proficiency: formData.proficiency.toLowerCase(),
+              flag: commonFlags[formData.name] || formData.flag,
+            }),
+          }
+        );
         if (!response.ok) throw new Error("Failed to create");
         const newLanguage = await response.json();
         setLanguages([...languages, newLanguage]);
@@ -170,7 +175,7 @@ function LanguageDashboard() {
   const deleteLanguage = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/languages/${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/languages/${id}`,
         { method: "DELETE" }
       );
       if (!response.ok) throw new Error("Failed to delete");
@@ -192,7 +197,7 @@ function LanguageDashboard() {
   const saveInlineEdit = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/languages/${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/languages/${id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
