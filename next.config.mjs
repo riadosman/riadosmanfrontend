@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "tr"], // Added Turkish since you're in Istanbul
+    localeDetection: true, // Automatically detect user's locale
+  },
+};
 
 export default nextConfig;
