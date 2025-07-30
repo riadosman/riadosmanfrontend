@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Plus, Edit2, Trash2, Save, X, Globe } from "lucide-react";
-import isAuth from "@/app/components/isAuth";
+import isAuth from "../../components/isAuth";
 
 function LanguageDashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);

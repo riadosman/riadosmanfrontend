@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import isAuth from "@/app/components/isAuth";
+import isAuth from "../components/isAuth";
 
 function Dashboard() {
   const [email, setEmail] = useState("");

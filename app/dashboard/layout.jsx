@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { isAuthenticated } from "@/Utils/Auth";
+import { isAuthenticated } from "../../Utils/Auth";
 function DashboardLayout({ children }) {
   return (
     <>
