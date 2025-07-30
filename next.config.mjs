@@ -15,6 +15,8 @@ const nextConfig = {
     locales: ["en", "tr"], // Added Turkish since you're in Istanbul
     localeDetection: true, // Automatically detect user's locale
   },
+  
+  output: 'standalone',
 };
 
 export default nextConfig;
