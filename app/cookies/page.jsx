@@ -20,27 +20,27 @@ export default function CookiePolicy() {
           marginBottom: "1.5rem",
         }}
       >
-        سياسة ملفات تعريف الارتباط (الكوكيز)
+        Cookie Policy
       </h1>
 
       <p style={{ marginBottom: 16 }}>
-        نستخدم الكوكيز لتحسين تجربة المستخدم على موقع{" "}
-        <strong>رياض عثمان</strong>. الكوكيز هي ملفات صغيرة تُخزن على جهازك
-        وتساعدنا في:
+        We use cookies to enhance the user experience on{" "}
+        <strong>Riyad Othman’s</strong> website. Cookies are small files stored
+        on your device that help us to:
       </p>
 
       <ul style={{ paddingLeft: 20, marginBottom: 16 }}>
-        <li>تذكر تفضيلاتك وإعداداتك.</li>
-        <li>تحليل استخدام الموقع لتحسينه.</li>
-        <li>تقديم إعلانات مخصصة.</li>
+        <li>Remember your preferences and settings.</li>
+        <li>Analyze site usage to improve it.</li>
+        <li>Deliver personalized advertisements.</li>
       </ul>
 
       <p style={{ marginBottom: 16 }}>
-        يمكنك التحكم في الكوكيز أو حذفها من خلال إعدادات المتصفح الخاص بك.
+        You can control or delete cookies through your browser settings.
       </p>
 
       <p>
-        لمزيد من المعلومات عن كيفية استخدام بياناتك، يرجى مراجعة{" "}
+        For more information on how we use your data, please review our{" "}
         <a
           href="/privacy"
           style={{
@@ -48,9 +48,9 @@ export default function CookiePolicy() {
             textDecoration: "underline",
           }}
         >
-          سياسة الخصوصية
-        </a>{" "}
-        الخاصة بنا.
+          Privacy Policy
+        </a>
+        .
       </p>
 
       <p
@@ -60,7 +60,7 @@ export default function CookiePolicy() {
           color: "var(--color-light-gray)",
         }}
       >
-        تاريخ آخر تحديث: 28/07/2025
+        Last updated: 28/07/2025
       </p>
     </div>
   );

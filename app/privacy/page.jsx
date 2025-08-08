@@ -20,68 +20,73 @@ export default function PrivacyPolicy() {
           marginBottom: "1.5rem",
         }}
       >
-        سياسة الخصوصية
+        Privacy Policy
       </h1>
       <p style={{ marginBottom: 16 }}>
-        نحن في <strong> موقع رياض عثمان</strong> نحترم خصوصيتك ونلتزم بحماية
-        بياناتك الشخصية. تشرح هذه السياسة كيف نقوم بجمع واستخدام وحماية معلوماتك
-        عند استخدام موقعنا.
+        At <strong>Riyad Othman’s website</strong>, we respect your privacy and
+        are committed to protecting your personal data. This policy explains how
+        we collect, use, and safeguard your information when you use our site.
       </p>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          1. البيانات التي نجمعها:
+          1. Data We Collect:
         </h2>
         <ul style={{ paddingLeft: 20, marginBottom: 0 }}>
           <li>
-            المعلومات التي تقدمها لنا مباشرة (كالاسم، الإيميل، رقم الهاتف).
+            Information you provide directly (such as name, email, phone
+            number).
           </li>
-          <li>بيانات التصفح (IP، نوع المتصفح، الصفحات التي تزورها).</li>
+          <li>Browsing data (IP address, browser type, pages you visit).</li>
         </ul>
       </section>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          2. كيف نستخدم البيانات:
+          2. How We Use Data:
         </h2>
         <ul style={{ paddingLeft: 20, marginBottom: 0 }}>
-          <li>لتحسين خدماتنا وتجربة المستخدم.</li>
-          <li>لإرسال تحديثات وعروض ترويجية (بعد موافقتك).</li>
-          <li>لتحليل الاستخدام وتحسين الموقع.</li>
+          <li>To improve our services and user experience.</li>
+          <li>To send updates and promotional offers (with your consent).</li>
+          <li>To analyze usage and enhance the website.</li>
         </ul>
       </section>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          3. مشاركة البيانات:
+          3. Data Sharing:
         </h2>
         <p>
-          لا نشارك بياناتك مع أطراف ثالثة إلا إذا كان ذلك ضرورياً للخدمة أو
-          بموافقتك.
+          We do not share your data with third parties unless necessary for the
+          service or with your consent.
         </p>
       </section>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          4. حماية البيانات:
+          4. Data Protection:
         </h2>
-        <p>نستخدم تقنيات أمنية لحماية معلوماتك من الوصول غير المصرح به.</p>
+        <p>
+          We use security technologies to protect your information from
+          unauthorized access.
+        </p>
       </section>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          5. حقوقك:
+          5. Your Rights:
         </h2>
         <p>
-          يمكنك طلب تعديل أو حذف بياناتك الشخصية في أي وقت عبر التواصل معنا على{" "}
+          You can request to modify or delete your personal data at any time by
+          contacting us at{" "}
           <a
-            href="riyados973@gmail.com"
+            href="mailto:riyados973@gmail.com"
             style={{
               color: "var(--color-main-secondary-color)",
               textDecoration: "underline",
             }}
           >
-            [بريد التواصل]
+            [Contact Email]
           </a>
           .
         </p>
@@ -89,11 +94,11 @@ export default function PrivacyPolicy() {
 
       <section>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          6. ملفات تعريف الارتباط:
+          6. Cookies:
         </h2>
         <p>
-          نستخدم الكوكيز لتحسين تجربتك، يمكنك التحكم بها من خلال إعدادات
-          المتصفح.
+          We use cookies to improve your experience. You can control them
+          through your browser settings.
         </p>
       </section>
 
@@ -104,7 +109,7 @@ export default function PrivacyPolicy() {
           color: "var(--color-light-gray)",
         }}
       >
-        تاريخ آخر تحديث: 28/07/2025
+        Last updated: 28/07/2025
       </p>
     </div>
   );

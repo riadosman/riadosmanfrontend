@@ -2,38 +2,21 @@ import React from "react";
 import Link from "next/link";
 import ProjectCard from "./ProjectCard";
 
-function TopProjects() {
+async function TopProjects() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
+  const data = await res.json();
+  const topPro = data.filter((p) => p.top === true);
   return (
     <div className="p-8 flex items-center flex-col justify-center">
       <h1 className="text-6xl font-bold my-10">Top Projects</h1>
       <div className="flex items-center flex-col md:flex-row justify-between gap-10 my-10">
-        <ProjectCard
-          title="Service 1"
-          description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
-          projectLink="/"
-          githubLink="/"
-        />
-        <ProjectCard
-          title="Service 1"
-          description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
-          projectLink="/"
-          githubLink="/"
-        />
-        <ProjectCard
-          title="Service 1"
-          description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
-          githubLink="/"
-        />
-        <ProjectCard
-          title="Service 1"
-          description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua."
-          projectLink="/"
-          githubLink="/"
-        />
+        {topPro.length > 0 ? (
+          topPro.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))
+        ) : (
+          <p className="text-2xl font-bold">No Top Projects Found</p>
+        )}
       </div>
       <Link
         href="/experience"

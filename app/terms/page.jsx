@@ -20,62 +20,65 @@ export default function TermsOfService() {
           marginBottom: "1.5rem",
         }}
       >
-        شروط الخدمة
+        Terms of Service
       </h1>
       <p style={{ marginBottom: 16 }}>
-        يرجى قراءة هذه الشروط بعناية قبل استخدام موقع{" "}
-        <strong>رياض عثمان</strong>.
+        Please read these terms carefully before using{" "}
+        <strong>Riyad Othman’s</strong> website.
       </p>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          1. القبول:
+          1. Acceptance:
         </h2>
-        <p>باستخدامك الموقع، فإنك توافق على الالتزام بهذه الشروط.</p>
+        <p>By using this site, you agree to comply with these terms.</p>
       </section>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          2. الاستخدام المسموح:
+          2. Permitted Use:
         </h2>
         <p>
-          أنت مسؤول عن استخدامك للموقع ولا يجوز استخدامه لأغراض غير قانونية أو
-          مخالفة للأخلاق.
+          You are responsible for your use of the site and must not use it for
+          illegal or unethical purposes.
         </p>
       </section>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          3. الملكية الفكرية:
+          3. Intellectual Property:
         </h2>
         <p>
-          جميع المحتويات (النصوص، الصور، الشعارات) ملك لـرياض عثمان ولا يجوز
-          نسخها أو إعادة نشرها بدون إذن.
+          All content (texts, images, logos) belongs to Riyad Othman and may not
+          be copied or republished without permission.
         </p>
       </section>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          4. الإخلاء من المسؤولية:
+          4. Disclaimer:
         </h2>
         <p>
-          الموقع يُقدم "كما هو" دون ضمانات، ولا نتحمل أي مسؤولية عن أي أضرار
-          تنجم عن استخدام الموقع.
+          The site is provided "as is" without warranties, and we are not liable
+          for any damages resulting from its use.
         </p>
       </section>
 
       <section style={{ marginBottom: 16 }}>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          5. إنهاء الخدمة:
+          5. Termination:
         </h2>
-        <p>نحتفظ بحقنا في تعليق أو إنهاء حسابك إذا انتهكت الشروط.</p>
+        <p>
+          We reserve the right to suspend or terminate your account if you
+          violate these terms.
+        </p>
       </section>
 
       <section>
         <h2 style={{ fontSize: "1.25rem", fontWeight: 600, marginBottom: 8 }}>
-          6. القوانين الحاكمة:
+          6. Governing Law:
         </h2>
-        <p>تخضع هذه الشروط لقوانين تركيا.</p>
+        <p>These terms are governed by the laws of Turkey.</p>
       </section>
 
       <p
@@ -85,7 +88,7 @@ export default function TermsOfService() {
           color: "var(--color-light-gray)",
         }}
       >
-        إذا لم توافق على هذه الشروط، يرجى عدم استخدام الموقع.
+        If you do not agree with these terms, please do not use the site.
       </p>
 
       <p
@@ -95,7 +98,7 @@ export default function TermsOfService() {
           color: "var(--color-light-gray)",
         }}
       >
-        تاريخ آخر تحديث: 28/07/2025
+        Last updated: 28/07/2025
       </p>
     </div>
   );

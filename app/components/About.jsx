@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaGithub,
   FaLinkedinIn,
+  FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
@@ -55,28 +56,25 @@ export default async function About() {
           <div className="flex-1">
             <h1 className="mb-10 text-3xl font-bold">Last News !</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequatur quam, ratione dolor magnam obcaecati explicabo
-              laboriosam neque fugit ad suscipit dolores eos labore molestiae
-              natus! Iure voluptas totam sint labore ipsum, aperiam nesciunt
-              consequuntur <span className="font-bold text-black ">omnis</span>{" "}
-              omnis eaque quibusdam reiciendis distinctio, quod obcaecati odit
-              architecto quas nulla nihil vitae dignissimos, nostrum iste. Lorem
-              ipsum <span className="font-bold text-black ">dolor</span> sit
-              amet consectetur adipisicing elit. Consequatur quam, ratione dolor
-              magnam obcaecati explicabo laboriosam neque fugit ad suscipit
-              dolores eos labore molestiae natus! Iure voluptas totam sint
-              labore ipsum, aperiam nesciunt consequuntur omnis eaque quibusdam
-              reiciendis distinctio, quod obcaecati odit architecto quas nulla
-              nihil vitae dignissimos, nostrum iste.
+              I am currently a software engineering student at Gedik University
+              in Istanbul, and I’m working as an intern at 180 Degree Company. I
+              have worked on many projects with the company, mainly websites
+              featuring AI integration and SaaS ideas. I share my projects on
+              LinkedIn—you’re welcome to check them out. In my free time, I love
+              learning new things, such as personal finance management and
+              exploring AI tools with today’s technologies. I try to embrace
+              these technologies rather than avoid or fear them. During the busy
+              and crowded transportation rides in Istanbul, I make it a point to
+              read new books. I enjoy self-improvement, money management, and
+              Islamic books.
             </p>
             <div className="mt-10">
-              <h1 className="mb-10 text-3xl font-bold">Contact :</h1>
+              <h1 className="mb-10 text-3xl font-bold">My Social :</h1>
               <div className="flex flex-row gap-4">
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="http://www.facebook.com"
+                  href="https://www.facebook.com/riyad.osman.35/"
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg"
                 >
                   <FaFacebook size={24} />
@@ -84,7 +82,7 @@ export default async function About() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="http://www.facebook.com"
+                  href="https://www.instagram.com/riad_osman__developer/"
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg"
                 >
                   <FaInstagram size={24} />
@@ -92,7 +90,7 @@ export default async function About() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="http://www.facebook.com"
+                  href="https://github.com/riadosman"
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg"
                 >
                   <FaGithub size={24} />
@@ -100,7 +98,7 @@ export default async function About() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="http://www.facebook.com"
+                  href="https://x.com/Rmagic19649744"
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg"
                 >
                   <FaXTwitter size={24} />
@@ -108,10 +106,18 @@ export default async function About() {
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"
-                  href="http://www.facebook.com"
+                  href="https://www.linkedin.com/in/riad-osman-b54343226/"
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg"
                 >
                   <FaLinkedinIn size={24} />
+                </Link>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.youtube.com/channel/UC_U4hWaqh7jEHpUVyU4VbxA"
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 shadow-lg"
+                >
+                  <FaYoutube size={24} />
                 </Link>
               </div>
             </div>

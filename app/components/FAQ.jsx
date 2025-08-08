@@ -1,6 +1,7 @@
 import React from "react";
 import { faqData } from "../../data/faq";
 import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 function FAQ() {
   return (
@@ -23,10 +24,11 @@ function FAQ() {
             {faqData.map((item, idx) => (
               <details
                 key={idx}
-                className="bg-white/40 p-4 rounded-lg shadow-md group"
+                className="bg-white/10 p-4 rounded-lg shadow-md group"
               >
-                <summary className="cursor-pointer font-semibold text-2xl list-none marker:hidden">
+                <summary className="flex items-center justify-between cursor-pointer font-semibold text-2xl list-none marker:hidden">
                   {item.question}
+                  <ChevronDown className="transition-transform duration-300 group-open:rotate-180" />
                 </summary>
                 <p className="mt-4 text-main-color">{item.answer}</p>
               </details>

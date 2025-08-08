@@ -9,7 +9,7 @@ export default function isAuth(Component) {
 
     useEffect(() => {
       if (!auth) {
-        return redirect("/dashboard");
+        return redirect("/");
       }
     }, []);
 

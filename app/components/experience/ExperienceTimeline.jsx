@@ -1,27 +1,35 @@
 export default function ExperienceTimeline() {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Solutions Inc.",
-      period: "2023 - Present",
+      title: "Internship Full Stack Developer",
+      company: "180 Degree AI solutions for Business growth",
+      period: "2025/04 - Present",
       description:
         "Leading development of scalable web applications using React, Next.js, and Node.js. Mentoring junior developers and architecting cloud solutions.",
-      technologies: ["React", "Next.js", "TypeScript", "AWS", "Docker"],
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "N8N",
+        "Nest.js",
+        "Docker",
+      ],
     },
     {
       title: "Full Stack Developer",
-      company: "Digital Agency Co.",
-      period: "2021 - 2023",
+      company: "Morlines Media",
+      period: "2023/06 - 2023/09",
       description:
         "Developed and maintained multiple client projects, implemented responsive designs, and optimized application performance.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
+      technologies: ["React", "Node.js", "Vue.js", "Tailwind CSS"],
     },
     {
-      title: "Frontend Developer",
-      company: "StartupXYZ",
-      period: "2020 - 2021",
+      title: "Software Engineer Bachelor's Degree",
+      company: "Istanbul Gedik University",
+      period: "2024 - 2028",
       description:
-        "Built modern, responsive user interfaces and collaborated with design teams to implement pixel-perfect designs.",
+        "Currently pursuing a Bachelor's in Software Engineering, focusing not just on writing code, but on thinking like an engineer—solving problems, designing scalable systems, and understanding the 'why' behind the 'how'. Continuously learning new technologies and bridging the gap between theory and real-world application.",
       technologies: ["React", "JavaScript", "CSS3", "Figma"],
     },
   ];

@@ -19,17 +19,14 @@ function Services() {
           />
           <div className="flex items-left justify-around flex-col">
             <p className="text-xl font-bold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              ducimus sequi ipsam deserunt, quas sed nihil cupiditate quidem
-              perferendis{" "}
-              <span className="text-main-secondary-color">laudantium</span>{" "}
-              similique unde voluptatum assumenda odio vitae autem, voluptate
-              repudiandae ipsum{" "}
-              <span className="text-main-secondary-color">laudantium</span> quae
-              non provident id esse! Tempora suscipit, laudantium qui molestiae
-              velit similique odit porro nihil, ipsum excepturi laborum et.non
-              provident id esse! Tempora suscipit, laudantium qui molestiae
-              velit similique odit porro nihil, ipsum excepturi laborum et.
+              Custom Websites Built Just for You I create fully custom,
+              responsive websites tailored to your exact needs—no templates, no
+              shortcuts. From sleek front-end to powerful back-end and smart
+              features like AI tools, Excel automations, and email APIs. Pricing
+              depends on your project, with fast delivery and reliable
+              post-launch support. Startups, freelancers, or businesses—fill the
+              request form for a clear quote and plan. Check my portfolio in
+              “Exprience”
             </p>
             <Link
               href="/service"

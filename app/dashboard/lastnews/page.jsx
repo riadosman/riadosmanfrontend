@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from "react";
 import { Plus, Edit2, Trash2, Save, X, Globe } from "lucide-react";
 import isAuth from "../../components/isAuth";
+import { useRouter } from "next/navigation";
 
 function LanguageDashboard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingLanguage, setEditingLanguage] = useState(null);
+  const [token, setToken] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     proficiency: "Beginner",
@@ -18,37 +20,40 @@ function LanguageDashboard() {
     name: "",
     proficiency: "",
   });
+  const router = useRouter();
 
   useEffect(() => {
-    fetchLanguages();
+    const tokenLocal = localStorage.getItem("token");
+    if (!tokenLocal) {
+      router.push("/");
+    } else {
+      setToken(tokenLocal);
+      fetchLanguages();
+    }
   }, []);
 
   const fetchLanguages = async () => {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/languages`
+        `${process.env.NEXT_PUBLIC_API_URL}/api/languages`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
       if (!response.ok) throw new Error("Failed to fetch languages");
       const data = await response.json();
       setLanguages(data);
     } catch (error) {
       console.error("Error fetching languages:", error);
-      setLanguages([
-        { id: 1, name: "English", proficiency: "Native", flag: "🇺🇸" },
-        { id: 2, name: "Spanish", proficiency: "Advanced", flag: "🇪🇸" },
-      ]);
+      setLanguages([]);
     } finally {
       setLoading(false);
     }
   };
 
-  const proficiencyLevels = [
-    "Beginner",
-    "Intermediate",
-    "Advanced",
-    "Fluent",
-    "Native",
-  ];
+  const proficiencyLevels = ["Beginner", "Intermediate", "Advanced"];
 
   const commonFlags = {
     English: "🇺🇸",
@@ -73,10 +78,6 @@ function LanguageDashboard() {
         return "bg-yellow-500/20 text-yellow-300 border-yellow-500/30";
       case "Advanced":
         return "bg-blue-500/20 text-blue-300 border-blue-500/30";
-      case "Fluent":
-        return "bg-green-500/20 text-green-300 border-green-500/30";
-      case "Native":
-        return "bg-purple-500/20 text-purple-300 border-purple-500/30";
       default:
         return "bg-gray-500/20 text-gray-300 border-gray-500/30";
     }
@@ -90,10 +91,6 @@ function LanguageDashboard() {
         return "w-2/5";
       case "Advanced":
         return "w-3/5";
-      case "Fluent":
-        return "w-4/5";
-      case "Native":
-        return "w-full";
       default:
         return "w-1/5";
     }
@@ -130,14 +127,13 @@ function LanguageDashboard() {
     try {
       if (editingLanguage) {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/languages/${editingLanguage.id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/api/languages`,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               name: formData.name,
               proficiency: formData.proficiency,
-              flag: commonFlags[formData.name] || formData.flag,
             }),
           }
         );
@@ -157,10 +153,11 @@ function LanguageDashboard() {
             body: JSON.stringify({
               name: formData.name,
               proficiency: formData.proficiency.toLowerCase(),
-              flag: commonFlags[formData.name] || formData.flag,
             }),
           }
         );
+        console.log(response);
+
         if (!response.ok) throw new Error("Failed to create");
         const newLanguage = await response.json();
         setLanguages([...languages, newLanguage]);
@@ -197,14 +194,13 @@ function LanguageDashboard() {
   const saveInlineEdit = async (id) => {
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/languages/${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/languages`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             name: inlineFormData.name,
             proficiency: inlineFormData.proficiency,
-            flag: commonFlags[inlineFormData.name] || "🌐",
           }),
         }
       );
@@ -426,4 +422,4 @@ function LanguageDashboard() {
     </div>
   );
 }
-export default isAuth(LanguageDashboard);
+export default LanguageDashboard;

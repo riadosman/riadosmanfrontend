@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
-export default function BlogsDashboard() {
+function BlogsDashboard() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [token, setToken] = useState("");
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -15,14 +17,25 @@ export default function BlogsDashboard() {
     isPublished: false,
   });
   const [editingBlogId, setEditingBlogId] = useState(null);
+  const router = useRouter();
 
   useEffect(() => {
-    fetchBlogs();
+    const tokenLocal = localStorage.getItem("token");
+    if (!tokenLocal) {
+      router.push("/");
+    } else {
+      setToken(tokenLocal);
+      fetchBlogs();
+    }
   }, []);
 
   const fetchBlogs = () => {
     setLoading(true);
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error(err))
@@ -271,3 +284,4 @@ export default function BlogsDashboard() {
     </div>
   );
 }
+export default BlogsDashboard;

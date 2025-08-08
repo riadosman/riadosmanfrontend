@@ -38,9 +38,9 @@ export default function Hero() {
       <div className="relative z-10 p-8 max-w-3xl">
         <p className="text-4xl">
           <span className="text-main-secondary-color font-bold">Hi,</span> I'm
-          Riad Osman
+          Riad Othman
         </p>
-        <p className="text-7xl md:text-9xl h-32 md:leading-40 leading-20 md:h-72 my-12">
+        <p className="text-7xl md:text-9xl h-32 md:leading-40 leading-20 md:h-72 mb-12">
           {words.map((word, index) => (
             <span
               key={index}
@@ -53,10 +53,11 @@ export default function Hero() {
           ))}
         </p>
         <p className="text-xl md:text-xl">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
-          incidunt autem aliquam a, iure distinctio? Lorem ipsum dolor, sit amet
-          consectetur adipisicing elit. Veritatis incidunt autem aliquam a, iure
-          distinctio?
+          In a rapidly evolving world, I believe continuous learning is the only
+          way to stay relevant. As a software engineering student, I work every
+          day to improve myself, knowing that every long journey begins with a
+          single step. I’m not looking to follow — I’m striving to be someone
+          worth following.
         </p>
         <button className="md:hidden mt-10 z-10 px-10 py-2 border-4 border-main-color bg-main-color text-white rounded-md cursor-pointer transition-all duration-300 active:scale-85">
           My CV
