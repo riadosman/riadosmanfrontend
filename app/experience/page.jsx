@@ -4,74 +4,26 @@ import useCountUp from "../components/experience/useCountUp";
 import StatsSection from "../components/experience/StatsSection";
 import ExperienceTimeline from "../components/experience/ExperienceTimeline";
 
-export default function ExperiencePage() {
+export default async function ExperiencePage() {
   const tools = [
-    { name: "React", level: 90, icon: "⚛️" },
-    { name: "Next.js", level: 85, icon: "▲" },
-    { name: "Tailwind CSS", level: 95, icon: "🎨" },
-    { name: "TypeScript", level: 80, icon: "📘" },
-    { name: "Node.js", level: 75, icon: "🟢" },
-    { name: "FastAPI", level: 70, icon: "⚡" },
-    { name: "PostgreSQL", level: 65, icon: "🐘" },
-    { name: "Docker", level: 50, icon: "🐳" },
+    { name: "React", level: 90, icon: "⚛️" }, // مناسبة جداً
+    { name: "Next.js", level: 85, icon: "⏭️" }, // سهم "التالي"
+    { name: "Express.js", level: 90, icon: "🚂" }, // يعبر عن "السيرفر السريع"
+    { name: "Tailwind CSS", level: 95, icon: "🌬️" }, // "ريح" = Tailwind
+    { name: "Node.js", level: 90, icon: "🌳" }, // شجرة = node
+    { name: "MongoDB", level: 90, icon: "🍃" }, // شعار MongoDB الفعلي ورقي
+    { name: "GIT/GITHUB", level: 80, icon: "🔧" }, // أداة برمجة / أو استخدم 🐙 لجيت هب
+    { name: "Mongoose", level: 60, icon: "🐍" }, // مكتبة ODM للـMongoDB، رمز الأفعى مناسب
+    { name: "Docker", level: 50, icon: "🐳" }, // رسمياً رمز Docker
+    { name: "Figma", level: 40, icon: "🎨" }, // رمز التصميم مناسب
+    { name: "TypeScript", level: 30, icon: "📘" }, // كتاب أزرق = TypeScript
+    { name: "N8N", level: 30, icon: "🔗" }, // "ربط العمليات"
+    { name: "Socket.io", level: 20, icon: "📡" }, // البث والتواصل
+    { name: "Shadcn UI", level: 40, icon: "🧩" }, // مكتبة واجهات = قطع UI
   ];
 
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and order processing.",
-      projectLink: "https://demo-ecommerce.com",
-      githubLink: "https://github.com/username/ecommerce",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      image: "/api/placeholder/400/250",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      projectLink: "https://taskapp-demo.com",
-      githubLink: "https://github.com/username/taskapp",
-      technologies: ["Next.js", "Socket.io", "MongoDB", "Tailwind CSS"],
-      image: "/api/placeholder/400/250",
-    },
-    {
-      title: "Weather Dashboard",
-      description:
-        "A responsive weather dashboard with location-based forecasts, interactive maps, and historical weather data visualization.",
-      projectLink: "https://weather-dashboard.com",
-      githubLink: "https://github.com/username/weather",
-      technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
-      image: "/api/placeholder/400/250",
-    },
-    {
-      title: "Blog CMS",
-      description:
-        "A headless CMS for blogs with markdown support, SEO optimization, and admin dashboard for content management.",
-      projectLink: "https://blog-cms-demo.com",
-      githubLink: "https://github.com/username/blog-cms",
-      technologies: ["Next.js", "FastAPI", "PostgreSQL", "MDX"],
-      image: "/api/placeholder/400/250",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "A modern, responsive portfolio website with smooth animations, dark mode support, and optimized performance.",
-      projectLink: "https://portfolio-demo.com",
-      githubLink: "https://github.com/username/portfolio",
-      technologies: ["Next.js", "Framer Motion", "Tailwind CSS", "Vercel"],
-      image: "/api/placeholder/400/250",
-    },
-    {
-      title: "Chat Application",
-      description:
-        "Real-time chat application with group messaging, file sharing, emoji support, and end-to-end encryption.",
-      projectLink: "https://chat-app-demo.com",
-      githubLink: "https://github.com/username/chat-app",
-      technologies: ["React", "Socket.io", "Node.js", "Redis"],
-      image: "/api/placeholder/400/250",
-    },
-  ];
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
+  const projects = await res.json();
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -145,14 +97,7 @@ export default function ExperiencePage() {
                 className="transform transition-all duration-300 hover:scale-105"
                 style={{ animationDelay: `${i * 100}ms` }}
               >
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  projectLink={project.projectLink}
-                  githubLink={project.githubLink}
-                  technologies={project.technologies}
-                  image={project.image}
-                />
+                <ProjectCard project={project} />
               </div>
             ))}
           </div>

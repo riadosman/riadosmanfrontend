@@ -1,11 +1,11 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-async function ProjectCard(props) {
-  const { title, description, projectLink, githubLink } = await props;
+function ProjectCard({ project }) {
   return (
-    <div className="bg-white/30 h-96 max-w-[350px] rounded-2xl p-6 shadow-[0_4px_50px_rgba(255,0,0,0.1)]">
+    <div className="p-6 bg-white/5 border border-white/10 rounded-2xl shadow-lg overflow-hidden backdrop-blur-sm hover:shadow-xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
       <Image
         src="/front-end-project.webp"
         alt="Service 1"
@@ -13,11 +13,11 @@ async function ProjectCard(props) {
         width={500}
         height={500}
       />
-      <p className="text-2xl font-bold mt-4">{title}</p>
-      <p className="text-sm my-3">{description}</p>
-      {projectLink && (
+      <p className="text-2xl font-bold mt-4">{project.title}</p>
+      <p className="text-sm my-3">{project.description}</p>
+      {project.livelink && (
         <Link
-          href={projectLink || "/"}
+          href={project.livelink || "/"}
           target="_blank"
           className="cursor-pointer text-main-secondary-color font-bold  hover:underline mr-2 duration-500"
         >
@@ -25,7 +25,7 @@ async function ProjectCard(props) {
         </Link>
       )}
       <Link
-        href={githubLink}
+        href={project.githublink || "/"}
         target="_blank"
         className="cursor-pointer text-main-secondary-color font-bold  hover:underline duration-500"
       >

@@ -34,7 +34,7 @@ export default function BlogCard({ blog }) {
         )}
       </div>
 
-      <div className="p-6 flex flex-col justify-between h-full">
+      <div className="p-6 text-left flex flex-col justify-between h-full">
         <div className="flex-grow">
           <div className="flex flex-wrap gap-2 mb-3">
             {blog.tags?.slice(0, 2).map((tag, index) => (

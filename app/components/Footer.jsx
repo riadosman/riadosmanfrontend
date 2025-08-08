@@ -222,7 +222,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-center md:text-left">
-            © {currentYear} Riad osman. All rights reserved.
+            © {currentYear} Riad osman. All rights reserved UI deigned by Ramy.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-sm">
             <Link

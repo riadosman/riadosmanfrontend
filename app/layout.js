@@ -8,11 +8,11 @@ const cairo = Cairo({
   variable: "--font-cairo",
 });
 export const metadata = {
-  title: "Riad Osman | Software Engineer & Web Developer",
+  title: "Riad Othman | Software Engineer & Web Developer",
   description:
-    "Official profile of Riad Osman – Software Engineer, Web Developer, and lifelong learner based in Istanbul.",
+    "Official profile of Riad Othman – Software Engineer, Web Developer, and lifelong learner based in Istanbul.",
   keywords: [
-    "Riad Osman",
+    "Riad Othman",
     "Software Engineer",
     "Web Developer",
     "Full Stack Developer",
@@ -23,20 +23,20 @@ export const metadata = {
     "Frontend Backend Developer",
     "Tech Blog",
   ],
-  authors: [{ name: "Riad Osman", url: "https://your-website.com" }],
-  creator: "Riad Osman",
+  authors: [{ name: "Riad Othman", url: "http://riadosman.180d.site/" }],
+  creator: "Riad Othman",
   openGraph: {
-    title: "Riad Osman | Software Engineer & Web Developer",
+    title: "Riad Othman | Software Engineer & Web Developer",
     description:
-      "Official profile of Riad Osman – Software Engineer, Web Developer, and lifelong learner based in Istanbul.",
-    url: "https://your-website.com",
-    siteName: "Riad Osman Portfolio",
+      "Official profile of Riad Othman – Software Engineer, Web Developer, and lifelong learner based in Istanbul.",
+    url: "http://riadosman.180d.site/",
+    siteName: "Riad Othman Portfolio",
     images: [
       {
-        url: "https://your-website.com/og-image.jpg",
+        url: "http://riadosman.180d.site/profile.png",
         width: 1200,
         height: 630,
-        alt: "Riad Osman Profile Picture",
+        alt: "Riad Othman Profile Picture",
       },
     ],
     locale: "en_US",
@@ -44,12 +44,12 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Riad Osman | Software Engineer & Web Developer",
+    title: "Riad Othman | Software Engineer & Web Developer",
     description:
-      "Official profile of Riad Osman – Software Engineer, Web Developer, and lifelong learner based in Istanbul.",
+      "Official profile of Riad Othman – Software Engineer, Web Developer, and lifelong learner based in Istanbul.",
     site: "@Rmagic19649744",
     creator: "@Rmagic19649744",
-    images: ["https://your-website.com/twitter-image.jpg"],
+    images: ["http://riadosman.180d.site/profile.jpg"],
   },
 };
 

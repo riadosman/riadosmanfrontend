@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 
 export default async function BlogDetail({ params }) {
   const { id } = await params;
@@ -13,7 +14,7 @@ export default async function BlogDetail({ params }) {
   );
 
   return (
-    <div className="p-8 text-right flex flex-col-reverse md:flex-row items-start justify-end gap-10">
+    <div className="p-8  flex flex-col-reverse md:flex-row-reverse items-start justify-end gap-10">
       <div className="w-[400px] border-2 border-white h-screen rounded-4xl mt-10 p-8">
         <p className="text-3xl border-b-2 pb-5">مقالات اخرى من اجلك</p>
         <div className="flex flex-col">
@@ -28,16 +29,16 @@ export default async function BlogDetail({ params }) {
           ))}
         </div>
       </div>
-      <div className="flex items-end flex-col gap-10 ">
-        <h1 className="text-3xl my-5 capitalize font-bold">{blog.title}</h1>
+      <div className="flex flex-col gap-10 ">
         <Image
           src={blog.image}
           alt={blog.title}
-          width={400}
+          width={600}
           height={400}
-          className="max-w-3xl h-fit object-cover rounded"
+          className="h-fit md:h-[400px] md:w-[600px] object-cover rounded"
         />
-        <p className="text-xl max-w-[800px]">{blog.content}</p>
+        <h1 className="text-3xl my-5 capitalize font-bold">{blog.title}</h1>
+        <ReactMarkdown>{blog.content}</ReactMarkdown>
       </div>
     </div>
   );

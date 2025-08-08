@@ -32,11 +32,17 @@ async function Blogs() {
           </div>
 
           {/* Blog Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {blogs.map((blog, index) => (
-              <BlogCard key={index} blog={blog} />
-            ))}
-          </div>
+          {blogs.length > 0 ? (
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              {blogs.map((blog, index) => (
+                <BlogCard key={index} blog={blog} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-2xl font-bold flex items-center justify-center mx-auto min-h-[50vh]">
+              No Blogs Found
+            </p>
+          )}
           <Link
             className="text-white active:scale-95 duration-500 bg-main-color py-4 px-8 rounded-2xl mt-10"
             href="/blogs"

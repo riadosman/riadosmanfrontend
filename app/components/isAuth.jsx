@@ -1,5 +1,5 @@
 "use client";
-import { isAuthenticated } from "@/Utils/Auth";
+import { isAuthenticated } from "../../Utils/Auth";
 import { useEffect } from "react";
 import { redirect } from "next/navigation";
 
@@ -9,7 +9,7 @@ export default function isAuth(Component) {
 
     useEffect(() => {
       if (!auth) {
-        return redirect("/dashboard");
+        return redirect("/");
       }
     }, []);
 

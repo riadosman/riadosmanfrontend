@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import useCountUp from "./useCountUp";
 export default function StatsSection() {
   const stats = [
-    { label: "Years Experience", value: 4, suffix: "+" },
-    { label: "Projects Completed", value: 50, suffix: "+" },
-    { label: "Happy Clients", value: 30, suffix: "+" },
-    { label: "Code Commits", value: 1000, suffix: "+" },
+    { label: "Years Experience", value: 2, suffix: "+" },
+    { label: "Projects Completed", value: 70, suffix: "+" },
+    { label: "Happy Clients", value: 5, suffix: "+" },
+    { label: "Code Commits", value: 200, suffix: "+" },
   ];
 
   return (
