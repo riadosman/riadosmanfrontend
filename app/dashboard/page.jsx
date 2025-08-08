@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import isAuth from "../components/isAuth";
 import { useRouter } from "next/navigation";
 
