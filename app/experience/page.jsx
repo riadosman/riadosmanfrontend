@@ -3,6 +3,7 @@ import SkillBar from "../components/experience/SkillBar";
 import useCountUp from "../components/experience/useCountUp";
 import StatsSection from "../components/experience/StatsSection";
 import ExperienceTimeline from "../components/experience/ExperienceTimeline";
+import Link from "next/link";
 
 export default async function ExperiencePage() {
   const tools = [
