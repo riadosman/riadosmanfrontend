@@ -70,7 +70,7 @@ export default async function About() {
             </p>
             <div className="mt-10">
               <h1 className="mb-10 text-3xl font-bold">My Social :</h1>
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-4 flex-wrap">
                 <Link
                   target="_blank"
                   rel="noopener noreferrer"

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../public/profile.png";
-
+import Link from "next/link";
 export default function Hero() {
   const texts = ["Software Engineer", "Web Developer", "Lifelong Learner"];
 
@@ -52,16 +52,21 @@ export default function Hero() {
             </span>
           ))}
         </p>
-        <p className="text-xl md:text-xl">
+        <p className="text-xl md:text-xl mb-12 md:mb-0">
           In a rapidly evolving world, I believe continuous learning is the only
           way to stay relevant. As a software engineering student, I work every
           day to improve myself, knowing that every long journey begins with a
           single step. I’m not looking to follow — I’m striving to be someone
           worth following.
         </p>
-        <button className="md:hidden mt-10 z-10 px-10 py-2 border-4 border-main-color bg-main-color text-white rounded-md cursor-pointer transition-all duration-300 active:scale-85">
+        <Link
+          href="/Cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="md:hidden z-10 px-10 py-2 border-4 border-main-color bg-main-color text-white rounded-md cursor-pointer transition-all duration-300 active:scale-85"
+        >
           My CV
-        </button>
+        </Link>
       </div>
       <div className="hidden md:block">
         <Image

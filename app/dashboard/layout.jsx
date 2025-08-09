@@ -17,6 +17,9 @@ function DashboardLayout({ children }) {
               <li>
                 <Link href="/dashboard/projects">Projects</Link>
               </li>
+              <li>
+                <Link href="/dashboard/subscribers">Subscribers</Link>
+              </li>
             </ul>
           </nav>
         </header>

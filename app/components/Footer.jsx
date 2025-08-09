@@ -21,9 +21,15 @@ export default function Footer() {
               build something great together.
             </p>
             <div className="flex gap-4">
-              <button className="px-6 py-2 border-2 border-main-color bg-main-color text-white rounded-md cursor-pointer transition-all duration-300 hover:bg-transparent hover:text-main-color active:scale-95">
+              <Link
+                href="/Cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 border-2 border-main-color bg-main-color text-white rounded-md cursor-pointer transition-all duration-300 hover:bg-transparent hover:text-main-color active:scale-95"
+              >
                 My CV
-              </button>
+              </Link>
+
               <button className="px-4 py-2 bg-transparent border-2 border-main-color text-main-color hover:bg-main-color hover:text-white duration-300 rounded-md cursor-pointer active:scale-95">
                 Download Free
               </button>

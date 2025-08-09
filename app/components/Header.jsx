@@ -103,9 +103,14 @@ export default function Header() {
         </div>
       )}
       <div className="hidden md:flex items-center justify-between gap-8">
-        <button className="px-10 py-2 border-4 border-main-color bg-main-color text-white rounded-md cursor-pointer transition-all duration-300 active:scale-85">
+        <Link
+          href="/Cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-2 border-2 border-main-color bg-main-color text-white rounded-md cursor-pointer transition-all duration-300 hover:bg-transparent hover:text-main-color active:scale-95"
+        >
           My CV
-        </button>
+        </Link>
 
         <button className="px-4 py-2 bg-transparent border-4 border-main-color text-white hover:bg-main-color duration-400 rounded-md cursor-pointer active:scale-85">
           Download Free

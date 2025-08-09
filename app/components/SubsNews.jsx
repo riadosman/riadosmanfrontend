@@ -20,21 +20,28 @@ function SubsNews() {
     setMessage("");
 
     try {
-      // Option 1: Send to your backend API
+      const res = await fetch("https://api.ipify.org?format=json");
+      const data = await res.json();
+      console.log("User IP:", data.ip);
+
+      const getinfo = await fetch(`https://ipinfo.io/${data.ip}/json`);
+      const info = await getinfo.json();
+      console.log("User info:", info);
+
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/newsletter`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/subscribers`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ email }),
+          body: JSON.stringify({ email, ...info }),
         }
       );
 
       if (response.ok) {
         setMessage(
-          "Successfully subscribed! Check your email for confirmation."
+          "Successfully subscribed! We'll keep you up to date with the latest news and updates."
         );
         setEmail("");
       } else {
