@@ -3,7 +3,9 @@ import Link from "next/link";
 import ProjectCard from "./ProjectCard";
 
 async function TopProjects() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
+    cache: "no-store",
+  });
   const data = await res.json();
   const topPro = data.filter((p) => p.top === true);
   return (

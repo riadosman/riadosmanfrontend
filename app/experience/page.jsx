@@ -23,7 +23,9 @@ export default async function ExperiencePage() {
     { name: "Shadcn UI", level: 40, icon: "🧩" }, // مكتبة واجهات = قطع UI
   ];
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
+    cache: "no-store",
+  });
   const projects = await res.json();
 
   return (
