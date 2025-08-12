@@ -7,7 +7,7 @@ function ProjectCard({ project }) {
   return (
     <div className="p-6 bg-white/5 border border-white/10 rounded-2xl shadow-lg overflow-hidden backdrop-blur-sm hover:shadow-xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
       <Image
-        src="/front-end-project.webp"
+        src={project.image}
         alt="Service 1"
         className="h-44 rounded-2xl object-cover"
         width={500}

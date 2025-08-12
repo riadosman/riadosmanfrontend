@@ -11,6 +11,7 @@ const CreateProject = () => {
     livelink: "",
     githublink: "",
     technologies: "",
+    top: false,
   });
   const router = useRouter();
 
@@ -122,6 +123,17 @@ const CreateProject = () => {
           onChange={handleChange}
           placeholder="Technologies (comma separated)"
         />
+        <label htmlFor="top">is Top project:</label>
+        <select
+          id="top"
+          className="p-2 text-main-color border-main-color border-2 rounded-lg focus:outline-none"
+          name="top"
+          value={formData.top}
+          onChange={handleChange}
+        >
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
 
         <button
           type="submit"

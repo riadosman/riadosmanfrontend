@@ -95,45 +95,48 @@ const Projects = () => {
         Create New Project
       </button>
       {editProject ? (
-        <div className="bg-gray-800 p-6 rounded-lg w-full max-w-md">
+        <div className="bg-white/5 p-6 rounded-lg w-full max-w-md flex flex-col gap-4">
           <h2 className="text-xl mb-4">Edit Project</h2>
           <input
-            className="w-full mb-2 p-2 text-black"
+            className="w-full mb-2 p-2 border-main-color border-2 rounded-lg "
             name="title"
             value={editProject.title}
             onChange={handleEditChange}
             placeholder="Title"
+            required
           />
           <textarea
-            className="w-full mb-2 p-2 text-black"
+            className="w-full mb-2 p-2 border-main-color border-2 rounded-lg "
             name="description"
             value={editProject.description}
             onChange={handleEditChange}
             placeholder="Description"
+            required
           />
           <input
-            className="w-full mb-2 p-2 text-black"
+            className="w-full mb-2 p-2 border-main-color border-2 rounded-lg "
             name="image"
             value={editProject.image}
             onChange={handleEditChange}
             placeholder="Image URL"
+            required
           />
           <input
-            className="w-full mb-2 p-2 text-black"
+            className="w-full mb-2 p-2 border-main-color border-2 rounded-lg "
             name="livelink"
             value={editProject.livelink}
             onChange={handleEditChange}
             placeholder="Live Link"
           />
           <input
-            className="w-full mb-2 p-2 text-black"
+            className="w-full mb-2 p-2 border-main-color border-2 rounded-lg "
             name="githublink"
             value={editProject.githublink}
             onChange={handleEditChange}
             placeholder="GitHub Link"
           />
           <input
-            className="w-full mb-2 p-2 text-black"
+            className="w-full mb-2 p-2 border-main-color border-2 rounded-lg "
             name="technologies"
             value={editProject.technologies.join(", ")}
             onChange={(e) =>
@@ -144,10 +147,21 @@ const Projects = () => {
             }
             placeholder="Technologies (comma separated)"
           />
+          <label htmlFor="top">is Top project:</label>
+          <select
+            id="top"
+            className="p-2 text-main-color border-main-color border-2 rounded-lg focus:outline-none"
+            name="top"
+            value={editProject.top}
+            onChange={handleEditChange}
+          >
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
           <div className="flex gap-4">
             <button
               onClick={saveProject}
-              className="bg-blue-500 px-4 py-2 rounded"
+              className="w-full px-10 py-2 border-4 border-main-color bg-main-color text-white rounded-md cursor-pointer transition-all duration-300 active:scale-85"
             >
               Save
             </button>
@@ -164,7 +178,7 @@ const Projects = () => {
           {projects.map((project) => (
             <div key={project._id} className="bg-gray-800 p-6 rounded-lg w-72">
               <img
-                src="/front-end-project.webp"
+                src={project.image}
                 alt={project.title}
                 className="w-full h-40 object-cover mb-4 rounded"
               />
