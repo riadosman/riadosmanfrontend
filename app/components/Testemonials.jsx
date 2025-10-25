@@ -50,6 +50,26 @@ function Testemonials() {
               className="absolute bottom-0 right-0 rotate-180"
             />
           </div>
+          <div className="text-center p-10 flex-1 border-2 border-main-color rounded-3xl min-h-96 relative flex items-center justify-center">
+            <Image
+              src="/quote.png"
+              width={100}
+              height={100}
+              alt="quote"
+              className="absolute top-0 left-0"
+            />
+            <p className="text-3xl italic">
+              الاستاذ رياض دقة بالعمل وسرعة بالتسليم، من أمهر
+              المبرمجين يلي عملت معهم
+            </p>
+            <Image
+              src="/quote.png"
+              width={100}
+              height={100}
+              alt="quote"
+              className="absolute bottom-0 right-0 rotate-180"
+            />
+          </div>
         </div>
       </div>
     </div>

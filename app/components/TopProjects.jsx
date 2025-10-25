@@ -8,6 +8,7 @@ async function TopProjects() {
   });
   const data = await res.json();
   const topPro = data.filter((p) => p.top === true);
+
   return (
     <div className="p-8 flex items-center flex-col justify-center">
       <h1 className="text-6xl font-bold my-10">Top Projects</h1>
