@@ -1,6 +1,10 @@
 export default async function SubsNews() {
+  console.log(process.env.NEXT_PUBLIC_API_URL);
+
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/subscribers`);
   const data = await res.json();
+  console.log(data);
+
   if (!data || data.length === 0)
     return (
       <p className="text-light-gray text-center text-sm">No data available</p>
