@@ -10,13 +10,7 @@ const nextConfig = {
       },
     ],
   },
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "tr"], // Added Turkish since you're in Istanbul
-    localeDetection: true, // Automatically detect user's locale
-  },
-  
-  output: 'standalone',
+  output: "standalone",
 };
 
 export default nextConfig;
